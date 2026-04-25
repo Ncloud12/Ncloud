@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wallpaper App</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="menu-btn" onclick="openMenu()">☰</div>
+  <input type="text" id="searchInput" placeholder="Search wallpapers..." class="search-box">
+</header>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <div class="close-btn" onclick="closeMenu()">✖</div>
+  <a onclick="showPage('home')">Home</a>
+  <a onclick="showPage('about')">About</a>
+  <a onclick="showPage('contact')">Contact</a>
+  <a onclick="showPage('privacy')">Privacy</a>
+  <a onclick="showPage('terms')">Terms</a>
+  <a onclick="showPage('fav')">Favourite</a>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- HOME -->
+<div id="home" class="page active-page">
+  <div id="loader">Loading...</div>
+  <div class="grid" id="gallery"></div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="page">
+<div class="page-content">
+<h2>About Us</h2>
+<p>Welcome to our website. We provide high-quality wallpapers for mobile and desktop users.</p>
+
+<p>Our goal is to deliver beautiful, free, and easy-to-download wallpapers for everyone.</p>
+
+<p>We regularly update our collection with new and trending wallpapers.</p>
+</div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="page">
+  <div class="page-content">
+    <h2>Contact</h2>
+    <p>If you have any questions or business inquiries, feel free to contact us.</p>
+
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:b20419999@gmail.com">b20419999@gmail.com</a>
+    </p>
+
+    <p>We usually reply within 24–48 hours.</p>
+  </div>
+</div>
+
+<!-- PRIVACY -->
+<div id="privacy" class="page">
+<div class="page-content">
+<h2>Privacy Policy</h2>
+<p>Your privacy is important to us.</p>
+
+<h3>Information We Collect</h3>
+<p>We may collect basic user data to improve our services.</p>
+
+<h3>Cookies</h3>
+<p>We use cookies to enhance user experience.</p>
+
+<h3>Google AdSense</h3>
+<p>We may display ads using Google AdSense, which may use cookies to show relevant ads.</p>
+
+<h3>Consent</h3>
+<p>By using our website, you agree to our Privacy Policy.</p>
+</div>
+</div>
+
+<!-- TERMS -->
+<div id="terms" class="page">
+<div class="page-content">
+<h2>Terms & Conditions</h2>
+<p>By using this website, you agree to these terms.</p>
+
+<h3>Use of Content</h3>
+<p>All wallpapers are for personal use only.</p>
+
+<h3>Accuracy</h3>
+<p>We do not guarantee that all information is always accurate.</p>
+
+<h3>Changes</h3>
+<p>We may update these terms at any time.</p>
+</div>
+</div>
+
+<!-- FAV -->
+<div id="fav" class="page">
+<div class="page-content">
+<h2>Favourite</h2>
+<div class="grid" id="favGallery"></div>
+</div>
+</div>
+
+<!-- FULLSCREEN -->
+<div class="fullscreen" id="fullscreen">
+  <div class="close-full" onclick="closeFull()">✖</div>
+  <img id="fullImg">
+
+  <div class="full-buttons">
+    <button class="btn share" onclick="shareImage()">Share</button>
+    <button class="btn download" onclick="downloadImage()">Download</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
